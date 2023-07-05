@@ -2,7 +2,7 @@ const id = new URLSearchParams(window.location.search).get('pokemon');
 
 const endpoint = `https://pokeapi.co/api/v2/pokemon/${id}`;
 
-const $loader = document.querySelector('.loader');
+const $loader =document.getElementById('loader');
 const $parentElement = document.querySelector('.details');
 let $template = ``;
 
