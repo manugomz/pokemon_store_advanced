@@ -25,11 +25,16 @@ const pokemonDisplay = async()=>{
                     <p> ${pokemon.types[1]&&pokemon.types[1].type.name} </p>
                 </div>
             <h1>${pokemon.name}</h1>
-            <div class="height">
-                <p> Height: ${pokemon.height} m </p>
-                <p> Weight: ${pokemon.weight} kg </p>
+            <div class= "wh">
+                <div class="height">
+                    <p> ${pokemon.weight} kg  </p>
+                    <p> Weight</p>
+                </div>
+                <div class="height">
+                    <p> ${pokemon.height} m </p>
+                    <p> Height </p>
+                </div>
             </div>
-
             <ul>
                 <li> ${pokemon.stats[0].stat.name}: ${pokemon.stats[0].base_stat}</li>
                 <li> ${pokemon.stats[1].stat.name}: ${pokemon.stats[1].base_stat}</li>
