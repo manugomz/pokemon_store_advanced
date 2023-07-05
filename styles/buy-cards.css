@@ -111,11 +111,17 @@ h6 {
     color: var(--alt-text-color);
     background-color: var(--primary-color);
     font-weight: 600;
-    padding: 5% 10%;
+    padding: 12% 18%;
     border: none;
     border-radius: 4px;
     margin: 0;
+    align-self: center;
 }
+
+.buy-link{
+    width: 28%;
+}
+
 /*----------------------------------Cards ------------------------------*/
 
 .more-cards-info{

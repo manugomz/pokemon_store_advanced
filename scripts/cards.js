@@ -88,13 +88,13 @@ let filteredPokemon =async(type)=>{
     await pokemonAPI.pokemon.map(x =>{
         pokeList.push(x.pokemon);
     });
-    console.log(offset, (pokeList.length));
+    //console.log(offset, (pokeList.length));
     if(offset<pokeList.length-40){
         limitedPokelist=pokeList.slice(offset,offset+20);
     }else{
         limitedPokelist=pokeList.slice(offset,pokeList.length-1);
     }
-    console.log(limitedPokelist);
+    //console.log(limitedPokelist);
     return limitedPokelist;
 }
 
@@ -104,20 +104,6 @@ pokemonTypeFilters[2].addEventListener('click',()=>filterPokemon(2));
 pokemonTypeFilters[3].addEventListener('click',()=>filterPokemon(3));
 
 /*--------------------------------------Cards display------------------------------------------------- */
-const fetchApi = async(url) => {
-    try {
-        $loader.innerHTML= `<span class="loader"></span>`;
-        let res =await fetch(url);
-        let json = await res.json();
-        if (!res.ok) throw { status: res.status, statusText: res.statusText };
-        $loader.innerHTML=``;
-        return json;
-    } catch (error) {
-        const errorMsg = document.createElement('p');
-        errorMsg.textContent = `error: ${error.message}`;
-        $parentElement.appendChild(errorMsg);
-    }  
-}
 
 const pokemonList = async(offset,type) =>{
     let urltype=``;
@@ -146,8 +132,10 @@ const pokemonData = async()=>{
         let indivpokemon =await fetchApi(listURL[i]);
         pokemonInfo.push(indivpokemon);
     }
+    console.log(pokemonInfo);
     return pokemonInfo;
 }
+
 
 
 const cardDisplay = async()=>{
@@ -162,7 +150,7 @@ const cardDisplay = async()=>{
             <img class="pokemon-img" src="${pokemon[i].sprites.other['official-artwork'].front_default}" alt="${pokemon[i].name}" >
             <div class="card-text">
                 <p><b>${pokemon[i].base_experience}</b></p>
-                <button class= "buy-button-${pokemon[i].name} buy-button">Buy</button>
+                <a class='buy-link' href="./card-details.html?pokemon=${pokemon[i].id}"> <button class= "buy-button">Buy</button></a>
             </div>
         </div>
         `;
