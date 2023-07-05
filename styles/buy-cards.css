@@ -1,0 +1,157 @@
+h1{
+    font-size: 3vw;
+    font-weight: 500;
+    color: var(--dark-title);
+    margin-bottom: 2%;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%;
+}
+
+.subtitle{
+    width: 35%;
+    text-align: center;
+}
+
+.filter{
+    width: 86%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.filter-option{
+    color: var(--filter-option);
+    margin: 2% 0px;
+    width: 100%;
+    padding-bottom: 1%;
+    margin-bottom: 1%;
+    border-bottom: 2px solid var(--gray);
+    text-align: center;
+    text-transform: capitalize;
+    
+}
+
+.to-dark-link:hover{
+    color: var(--dark-color);
+    font-weight: bold;
+    border-bottom: 2px solid var(--dark-color);
+    cursor: pointer;
+}
+
+.arrow{
+    color: var(--gray);
+}
+
+.arrow:hover{
+    color: var(--dark-color);
+    cursor: pointer;
+}
+
+.unactive:hover{
+    cursor:not-allowed;
+
+}
+
+/*----------------------------------Cards ------------------------------*/
+#cards-display{
+    width: 90%;
+    display:grid;
+    grid-template-columns:25% 25% 25% 25%;
+    margin-left: 2%;
+}
+h6 {
+ color: black;
+ text-transform: capitalize;
+}
+
+.card{
+    background-color: #DEE5ED;
+    padding: 4%;
+    border: none;
+    border-radius: 10px;
+    margin: 5% 0;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-text{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    align-items:center;
+    padding: 1% 5%;
+}
+
+.heart{
+    height: 1em;
+}
+.heart:hover{
+    height: 1.2em;
+    transition: 0.2s;
+}
+
+.pokemon-img{
+    background-color: var(--alt-text-color);
+    padding: 8%;
+    border: none;
+    width: 90%;
+    height: 80%;
+    border-radius: 4px;
+    margin: 5%;
+}
+
+.buy-button{
+    color: var(--alt-text-color);
+    background-color: var(--primary-color);
+    font-weight: 600;
+    padding: 5% 10%;
+    border: none;
+    border-radius: 4px;
+    margin: 0;
+}
+/*----------------------------------Cards ------------------------------*/
+
+.more-cards-info{
+    display: flex;
+    justify-content:space-between;
+    align-self: flex-end;
+    width: 50%;
+    align-items: center;
+    margin-right: 7vw;
+}
+
+.more-button {
+    color: var(--alt-text-color);
+    background-color: var(--primary-color);
+    width: 12vw;
+    font-weight: 600;
+    padding: 2% 2%;
+    border-radius: 4px;
+    margin: 4% 0;
+}
+
+/* ---------------------------------responsive------------------------------------------------*/
+
+@media only screen and (max-width:912px){
+    .more-cards-info{
+        width: 55%;
+    }
+    
+    .more-button {
+        width: 30%;
+        margin-left: 5%;
+    }
+}
+
+@media only screen and (max-width:576px){
+    .subtitle{
+        width: 80%;
+    }
+}

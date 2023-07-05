@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon store</title>
+    <link rel="icon" href="assets/pokeball.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/buy-cards.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="./assets/logo.svg" alt="Pokémon logo">
+        <div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./buy-cards.html">Buy cards</a></li>
+                    <li><a href="./our-blog.html">Our Blog</a></li>
+                </ul>
+            </nav>
+            <button id="dark-button">Dark mode</button>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h1 class="to-dark">Checkout Out Pokemon Cards</h1>
+            <p class="to-dark" class="subtitle" >The Pokemon Go expansion for the Pokemon Trading Card Game will release soon.</p>
+            <ul class="filter">
+                <li class="arrow arrow-left"><i class="fa-sharp fa-solid fa-caret-left fa-xl"></i></li>
+                <li class="filter-option to-dark-link" >all</li>
+                <li class="filter-option to-dark-link" >normal</li>
+                <li class="filter-option to-dark-link" >fighting</li>
+                <li class="filter-option to-dark-link" >flying</li>
+                <li class="arrow arrow-right"><i class="fa-sharp fa-solid fa-caret-right fa-xl"></i></li>
+            </ul>
+            <div id="cards-display">
+            </div>
+            <div id="loader"></div>
+        <div class="more-cards-info">
+            <button class="more-button">Show more cards</button>
+            <p class="to-dark number">120 cards</p>
+        </div>
+        </section>
+    </main>
+    <footer>
+        <div id= "other-media">
+            <img class="logo" src="./assets/logo.svg" alt="Pokémon logo">
+            <p class= "vision-text">Our vision is to provide convenience and help increase your sales business.</p>
+            <div>
+                <a href="https://www.facebook.com/PokemonOficialLatAm/"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
+                <a href="https://twitter.com/Pokemon"><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></a>
+                <a href="https://www.instagram.com/pokemon/"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>   
+            </div>
+        </div>
+        <div class="page-info">
+            <div>
+                <p class="title-blue">About</p>
+                <ul>
+                    <li><a href="">How it works</a></li>
+                    <li><a href="">Featured</a></li>
+                    <li><a href="">Partnership</a></li>
+                    <li><a href="">Business Relation</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="title-blue">Community</p>
+                <ul>
+                    <li><a href="">Events</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Podcast</a></li>
+                    <li><a href="">Invite a friend</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="title-blue">Socials</p>
+                <ul>
+                    <li><a href="https://discord.com/">Discord</a></li>
+                    <li><a href="https://www.instagram.com/pokemon/">Instagram</a></li>
+                    <li><a href="https://twitter.com/Pokemon">Twitter</a></li>
+                    <li><a href="https://www.facebook.com/PokemonOficialLatAm/">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="./scripts/cards.js"></script>
+<script src="./scripts/dark.js"></script>
+</html>

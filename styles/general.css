@@ -1,0 +1,275 @@
+:root {
+    --primary-color:#306BB3;
+    --alt-text-color: #fff;
+    --dark-color:#1A202C;  
+    --gray: #a2a2a8;
+    --light-text: #1a202c81;
+    --dark-title: #486284;
+    --filter-option:#1a202c6c;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Plus Jakarta Sans";  
+    list-style: none;
+    font-size: 16px;
+}
+
+.logo {
+    width: 15vw;
+    margin: 1% 3%;
+}
+
+button:hover{
+    box-shadow: 0px 0.3em 0.5em #0000004d;
+}
+
+.dark-mode-bg{
+    background-color: var(--dark-color);
+    transition: 0.5s;
+}
+
+.dark-mode-txt{   
+    color: var(--alt-text-color);
+    transition: 0.5s;
+} 
+.dark-mode-link{   
+    color: var(--gray);
+    transition: 0.5s;
+} 
+
+.dark-mode-link:hover{   
+    color: var(--alt-text-color);
+    text-decoration: none;
+    border-bottom: 2px solid var(--alt-text-color);
+    cursor: pointer;
+    transition: 0.5s;
+} 
+
+.dar-mode-arrow{
+    color: var(--gray);
+    transition: 0.5s;
+}
+
+.dark-mode-arrow:hover{   
+    color: var(--alt-text-color);
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s;
+} 
+
+/* -------------------------------------Header-------------------------------------*/
+
+header{
+    background-color: var(--primary-color);
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100vw;
+}
+
+header>div{
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+    align-items: center;
+    gap:5%
+
+}
+
+nav{
+    width:70%;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10%;
+    font-weight: 500;  
+}
+
+a{
+    color: var(--alt-text-color);
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--alt-text-color);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+button{
+    color: var(--primary-color);
+    background-color: var(--alt-text-color);
+    padding: 1%;
+    border: none;
+    border-radius: 4px;
+}
+
+/*-------------------------------------main-----------------------------------------------*/
+body{
+    background-color: var(--alt-text-color);
+    transition: 1s;
+}
+
+/* --------------------------------------footer---------------------------------------*/
+footer{
+    background-color: var(--primary-color);
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+}
+
+div>a>i{
+    padding-right: 3%;
+    font-size: 1.5em;
+}
+
+div>ul>li {
+    padding: 0.4em 0px;
+}
+
+.page-info{
+    display: flex;
+    width: 55%;
+    justify-content: space-around;
+    padding: 3vw 0px;
+}
+
+.title-blue {
+    color: var(--alt-text-color);
+    font-weight: bold;
+    margin: 1vw 0px;
+}
+
+.vision-text{
+    color: var(--alt-text-color);
+}
+
+#other-media{
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+    padding: 1em 0px;
+}
+
+div>a>i:hover{
+    font-size: 1.7em;
+}
+
+/*----------------------------Responsive-----------------------------*/
+
+@media only screen and (max-width:390px){
+    *{font-size: 3vw;}
+
+    /*----------Header-----------*/
+    header{
+        flex-direction: column;
+    }
+
+    .logo{
+        width: 30%;
+        align-self: center;
+    }
+
+    header>div{
+        width: 100%;
+        padding: 4% 0%;
+    }
+
+    nav{
+        width:65%;
+    }
+
+    .nav-list { /*header ul*/
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    nav>ul>li{
+        font-size: 12px;
+    }
+
+    button{
+        font-size: 0.8em;
+    }
+
+    /*---------------------Footer----------------------*/
+    footer{
+        flex-direction: column;
+    }
+
+    .page-info{
+        width: 100%;
+        padding-bottom: 2em;
+    }
+
+    #other-media{
+        width: 100%;
+    }
+
+    #other-media>div{
+        display: flex;
+        width: 50%;
+        justify-content: space-around;
+        align-self: center; 
+    }
+
+    .vision-text{
+        margin-left: 2em;
+    }
+
+    .page-info>div>ul>li>a{
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (max-width:576px){
+    *{
+        font-size: 12px;  
+    }
+}
+
+/*---- LOADER---------------- */
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 4px solid var(--primary-color);
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    margin: 20px 0px;
+}
+
+.loader::after {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border-bottom: 4px solid #d6c400;
+    border-left: 4px solid transparent;
+    align-self: center;
+    margin-top: 10%;
+}
+
+@keyframes rotation {
+    0% {
+    transform: rotate(0deg);
+    }
+    100% {
+    transform: rotate(360deg);
+    }
+} 

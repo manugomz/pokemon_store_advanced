@@ -1,0 +1,62 @@
+/* -------------------------------------Main--------------------------------------*/
+h1{
+    font-size: 3em;
+    text-align: center;
+    font-weight: 500;
+    color:var(--dark-title) ;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4% 2% ;
+}
+
+article>div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2%;
+    padding: 2% 3%;
+}
+
+.main-text{
+    width: 50%;
+}
+
+.main-img{
+    max-width: 40%;
+}
+.subtitle{
+    width: 50%;
+    text-align: center;
+}
+
+/*-------------------------------Responsive-------------------------------------------*/
+@media only screen and (max-width:912px){
+    .subtitle{
+        width: 70%;
+    }
+    article>div{
+        flex-direction: column;
+    }
+    
+    .main-text{
+        width: 90%;
+    }
+    
+    .main-img{
+        max-width: 40%;
+        margin-bottom: 2%;
+    }
+}
+
+@media only screen and (max-width:576px){
+    .main-img{
+        max-width: 60%;
+    
+    }
+}
