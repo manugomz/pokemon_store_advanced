@@ -23,8 +23,8 @@ const url ="https://pokeapi.co/api/v2/pokemon/";
 
 const initGlobal= ()=>{
     offset=0;
-    $template = ``;
     $loader.innerHTML= `<span class="loader"></span>`;
+    $template = ``;
     number =20;
     numberCards.textContent=`${number} cards`;
     return (offset,number)
@@ -34,8 +34,6 @@ initGlobal();
 /*---------------------------move filters------------------------------------*/
 
 const moveFilter = (arrow) =>{
-    console.log(index);
-
     if (arrow==='left'){
         if (index>=4){
             index =index-4;
@@ -88,8 +86,9 @@ let filteredPokemon =async(type)=>{
     await pokemonAPI.pokemon.map(x =>{
         pokeList.push(x.pokemon);
     });
-    //console.log(offset, (pokeList.length));
-    if(offset<pokeList.length-40){
+    console.log(pokeList);
+    console.log(offset, (pokeList.length));
+    if(offset<pokeList.length-20){
         limitedPokelist=pokeList.slice(offset,offset+20);
     }else{
         limitedPokelist=pokeList.slice(offset,pokeList.length-1);
@@ -112,6 +111,7 @@ const pokemonList = async(offset,type) =>{
         const pokemonAPI = await fetchApi(urltype);
         return pokemonAPI.results;
     }else{
+        
         return filteredPokemon(type);
     }
 
@@ -144,11 +144,11 @@ const cardDisplay = async()=>{
         $template += `
         <div class="card">
             <div class="card-text">
-                <h6><b>${pokemon[i].name}</b></h6>
+                <h6>${pokemon[i].name}</h6>
                 <img class="heart" src="./assets/heart-svgrepo-com.svg" alt="heart"/>
             </div>
             <img class="pokemon-img" src="${pokemon[i].sprites.other['official-artwork'].front_default}" alt="${pokemon[i].name}" >
-            <div class="card-text">
+            <div class="card-text text-bottom">
                 <p><b>${pokemon[i].base_experience}</b></p>
                 <a class='buy-link' href="./card-details.html?pokemon=${pokemon[i].id}"> <button class= "buy-button">Buy</button></a>
             </div>
