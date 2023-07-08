@@ -1,5 +1,5 @@
 h1{
-    font-size: 3vw;
+    font-size: 2em;
     font-weight: 500;
     color: var(--dark-title);
     margin-bottom: 2%;
@@ -11,6 +11,8 @@ section{
     align-items: center;
     padding-top: 5%;
 }
+
+.to-dark{margin: 0 5%;}
 
 .subtitle{
     width: 35%;
@@ -182,3 +184,13 @@ h6 {
         margin-right: 10% ;
     }
 }
+
+@media only screen and (max-width:620px){
+    #cards-display{
+        width: 85%;
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr;
+        margin-left: 2%;
+    }
+}
+
