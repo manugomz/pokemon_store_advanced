@@ -13,6 +13,8 @@ section{
     padding-top: 5%;
 }
 
+.to-dark{margin: 0 5%;}
+
 .subtitle{
     width: 35%;
     text-align: center;
@@ -187,6 +189,4 @@ h6 {
     .card-text{
         margin: 0 5%;
     }
-    
-
 }

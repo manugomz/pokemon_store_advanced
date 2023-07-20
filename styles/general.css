@@ -68,6 +68,7 @@ header{
     flex-direction: row;
     justify-content: space-between;
     width:100vw;
+    padding: 2% 0%;
 }
 
 header>div{
@@ -182,7 +183,7 @@ div>a>i:hover{
 
 @media only screen and (max-width:520px){
     *{
-        font-size: 12px;  
+        font-size: 16px;  
     }
     /*header*/
     header{
@@ -230,19 +231,19 @@ div>a>i:hover{
 
 }
 
-
-@media only screen and (max-width:300px){
-    *{font-size: 9px;}
+@media only screen and (max-width:375px){
+    *{font-size: 10px;}
 }
 
-/*------------------------ LOADER---------------- */
+
+/*---- LOADER---------------- */
 
 .loader {
     display: inline-block;
     width: 80px;
     height: 80px;
-  }
-  .loader:after {
+}
+.loader:after {
     content: " ";
     display: block;
     width: 64px;
@@ -252,12 +253,12 @@ div>a>i:hover{
     border: 6px solid var(--primary-color);
     border-color: var(--primary-color) transparent var(--primary-color) transparent;
     animation: lds-dual-ring 1.6s linear infinite;
-  }
-  @keyframes lds-dual-ring {
+}
+@keyframes lds-dual-ring {
     0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
     }
     100% {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
     }
-  }
+}

@@ -149,7 +149,7 @@ const cardDisplay = async()=>{
             </div>
             <img class="pokemon-img" src="${pokemon[i].sprites.other['official-artwork'].front_default}" alt="${pokemon[i].name}" >
             <div class="card-text text-bottom">
-                <p><b>${pokemon[i].base_experience}</b></p>
+                <p><b>EXP: ${pokemon[i].base_experience}</b></p>
                 <a class='buy-link' href="./card-details.html?pokemon=${pokemon[i].id}"> <button class= "buy-button">Buy</button></a>
             </div>
         </div>
