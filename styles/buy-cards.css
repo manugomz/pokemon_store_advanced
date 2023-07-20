@@ -1,8 +1,9 @@
 h1{
-    font-size: 3vw;
+    font-size: 2rem;
     font-weight: 500;
     color: var(--dark-title);
     margin-bottom: 2%;
+    text-align: center;
 }
 
 section{
@@ -61,7 +62,7 @@ section{
 #cards-display{
     width: 85%;
     display:grid;
-    grid-template-columns:25% 25% 25% 25%;
+    grid-template-columns:repeat(4,1fr);
     margin-left: 2%;
 }
 
@@ -161,6 +162,16 @@ h6 {
         width: 30%;
         margin-left: 5%;
     }
+    #cards-display{
+        grid-template-columns:repeat(3,1fr);
+    }
+    .to-dark{
+        margin-left: 10% ;
+        margin-right: 10% ;
+    }
+    .text-bottom{
+    justify-content: space-around;
+    }
 }
 
 @media only screen and (max-width:576px){
@@ -177,8 +188,5 @@ h6 {
         margin: 0 5%;
     }
     
-    .to-dark{
-        margin-left: 10% ;
-        margin-right: 10% ;
-    }
+
 }

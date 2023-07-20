@@ -12,8 +12,10 @@ if(sessionStorage.darkMode === 'on'){
 darkButton.addEventListener("click",()=>{
     if (sessionStorage.darkMode === "on") {
         sessionStorage.darkMode = "off";
+        darkButton.textContent="Dark mode";
     } else {
         sessionStorage.darkMode = "on";
+        darkButton.textContent="Light mode";
     }
     darkModeToggle();
 });
