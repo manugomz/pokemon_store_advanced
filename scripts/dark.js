@@ -5,32 +5,33 @@ const textLinks = document.querySelectorAll('.to-dark-link');
 const arrow = document.querySelectorAll('.arrow');
 const colorBack = document.body;
 
-if(sessionStorage.darkMode === 'on'){
+if (sessionStorage.darkMode === 'on') {
     darkModeToggle();
+    darkButton.textContent = "Light mode";
 }
 
-darkButton.addEventListener("click",()=>{
+darkButton.addEventListener("click", () => {
     if (sessionStorage.darkMode === "on") {
         sessionStorage.darkMode = "off";
-        darkButton.textContent="Dark mode";
+        darkButton.textContent = "Dark mode";
     } else {
         sessionStorage.darkMode = "on";
-        darkButton.textContent="Light mode";
+        darkButton.textContent = "Light mode";
     }
     darkModeToggle();
 });
 
-function darkModeToggle () {
+function darkModeToggle() {
     colorBack.classList.toggle('dark-mode-bg');
 
-    arrow.forEach(arrow =>{
+    arrow.forEach(arrow => {
         arrow.classList.toggle('dark-mode-arrow');
     })
 
-    textLists.forEach(text =>{
+    textLists.forEach(text => {
         text.classList.toggle('dark-mode-txt');
     })
-    textLinks.forEach(text =>{
+    textLinks.forEach(text => {
         text.classList.toggle('dark-mode-link');
     })
 }

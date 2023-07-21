@@ -32,18 +32,29 @@ section{
     margin: 2% 0px;
     width: 100%;
     padding-bottom: 1%;
-    margin-bottom: 1%;
     border-bottom: 2px solid var(--gray);
     text-align: center;
     text-transform: capitalize;
     
 }
 
-.to-dark-link:hover{
+.filter-option:hover{
     color: var(--dark-color);
     font-weight: bold;
     border-bottom: 2px solid var(--dark-color);
     cursor: pointer;
+}
+
+.picked-option{
+    color: var(--dark-color);
+    font-weight: bold;
+    border-bottom: 2.2px solid var(--dark-color);
+}
+
+.picked-option.dark-mode-link {
+    color: var(--alt-text-color);
+    font-weight: bold;
+    border-bottom: 2px solid var(--alt-text-color);
 }
 
 .arrow{
@@ -57,7 +68,7 @@ section{
 
 .unactive:hover{
     cursor:not-allowed;
-
+    color: var(--gray);
 }
 
 /*----------------------------------Cards ------------------------------*/
@@ -99,8 +110,17 @@ h6 {
     height: 1em;
 }
 .heart:hover{
-    height: 1.2em;
+    height: 1.25em;
     transition: 0.2s;
+}
+
+.fa-regular::before{
+    transition: 0.2s;
+    color:#000000;
+}
+.fa-solid.fa-heart::before{
+    transition: 0.5s;
+    color:#f75231;
 }
 
 .text-bottom{
@@ -153,6 +173,56 @@ h6 {
     margin: 4% 0;
 }
 
+/*---------------------skeleton-----------------------*/
+
+.skeleton{
+    animation: skeleton-loading 1s linear infinite alternate;
+
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: #DEE5ED;
+    }
+    100% {
+        background-color: hsl(200, 20%, 95%);
+    }
+}
+
+.skeleton-text{
+    width: 3.5em;
+    height: 0.8em;
+    border-radius: 20px;
+    animation: skeleton-img-loading 1s linear infinite alternate;
+    
+}
+
+.skeleton-img{
+    height: 8.2em;
+    animation: skeleton-img-loading 1s linear infinite alternate;
+}
+
+.skeleton-btn{
+    cursor: wait;
+    animation: skeleton-img-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-img-loading {
+    0% {
+        background-color:  hsl(0, 0%, 100%);
+    }
+    100% {
+        background-color: #f7f7f7;
+    }
+}
+
+.fa-regular.fa-heart.skeleton-svg::before{
+    color: #f7f7f7;
+}
+
+.skeleton.hidden{
+    display: none;
+}
 /* ---------------------------------responsive------------------------------------------------*/
 
 @media only screen and (max-width:912px){
@@ -190,3 +260,5 @@ h6 {
         margin: 0 5%;
     }
 }
+
+

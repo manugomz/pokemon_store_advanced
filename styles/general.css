@@ -68,7 +68,6 @@ header{
     flex-direction: row;
     justify-content: space-between;
     width:100vw;
-    padding: 2% 0%;
 }
 
 header>div{
@@ -76,8 +75,7 @@ header>div{
     width: 70%;
     justify-content: space-around;
     align-items: center;
-    gap:5%
-
+    gap:5%;
 }
 
 nav{
@@ -103,11 +101,13 @@ a:hover{
 }
 
 button{
-    color: var(--primary-color);
-    background-color: var(--alt-text-color);
     padding: 1%;
     border: none;
     border-radius: 4px;
+}
+
+button:hover{
+    cursor: pointer;
 }
 
 /*-------------------------------------main-----------------------------------------------*/
@@ -160,7 +160,7 @@ div>ul>li {
 }
 
 div>a>i:hover{
-    font-size: 1.7em;
+    font-size: 1.6em;
 }
 
 
@@ -172,6 +172,11 @@ div>a>i:hover{
     header>div{
         padding: 2% 0;
     }
+     /*----loader----*/
+     .loader:after{
+        width: 44px;
+        height: 44px;
+    }
 }
 
 @media only screen and (max-width:620px){
@@ -181,9 +186,9 @@ div>a>i:hover{
 
 }
 
-@media only screen and (max-width:520px){
+@media only screen and (max-width:540px){
     *{
-        font-size: 16px;  
+        font-size: 15px;  
     }
     /*header*/
     header{
@@ -223,14 +228,16 @@ div>a>i:hover{
         align-self: center; 
     }
     .vision-text{
-        margin-left: 2em;
+        margin: 0 2em 1em 2em;
     }
     .page-info>div>ul>li>a{
         font-size: 0.8em;
     }
-
 }
 
+@media only screen and (max-width:420px){
+    *{font-size: 12px;}
+}
 @media only screen and (max-width:375px){
     *{font-size: 10px;}
 }
