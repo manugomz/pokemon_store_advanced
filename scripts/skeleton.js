@@ -14,7 +14,7 @@ function addSkeleton() {
         </div>
     </div>
     `;
-        $parentElement.innerHTML = $templateSkeleton;
+        $skeletonContainer.innerHTML = $templateSkeleton;
     }
 }
 
@@ -23,5 +23,11 @@ function hideSkeleton() {
     skltArray.forEach(element => {
         element.classList.add('hidden');
     });
+}
 
+function showSkeleton() {
+    let skltArray = Array.from(document.getElementsByClassName('skeleton'));
+    skltArray.forEach(element => {
+        element.classList.remove('hidden');
+    });
 }

@@ -79,7 +79,6 @@ section{
     margin-left: 2%;
 }
 
-
 h6 {
     color: black;
     text-transform: capitalize;
@@ -175,6 +174,14 @@ h6 {
 
 /*---------------------skeleton-----------------------*/
 
+#cards-skeleton{
+    width: 85%;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    margin-left: 2%;
+}
+
+
 .skeleton{
     animation: skeleton-loading 1s linear infinite alternate;
 
@@ -198,7 +205,7 @@ h6 {
 }
 
 .skeleton-img{
-    height: 8.2em;
+    height: 10rem;
     animation: skeleton-img-loading 1s linear infinite alternate;
 }
 
@@ -244,11 +251,17 @@ h6 {
     .text-bottom{
     justify-content: space-around;
     }
+    #cards-skeleton{
+        grid-template-columns:repeat(3,1fr);
+    }
 }
 
 @media only screen and (max-width:576px){
     .subtitle{
         width: 80%;
+    }
+    .skeleton-img{
+        height: 7rem;
     }
 }
 

@@ -7,6 +7,8 @@ const arrowRight = document.querySelector('.arrow-right');
 const arrowLeft = document.querySelector('.arrow-left');
 const heart = document.querySelectorAll('.heart');
 
+const $skeletonContainer = document.getElementById('cards-skeleton');
+
 
 /*-----------Global variables--------------*/
 let offset;
@@ -24,16 +26,18 @@ sessionStorage.likedPokemon = JSON.stringify();
 const url = "https://pokeapi.co/api/v2/pokemon/";
 
 /*--------------------------------- Initializations -------------------------------------*/
-
-const initGlobal = () => {
+addSkeleton();
+initGlobal();
+function initGlobal() {
     offset = 0;
     number = 20;
     $template = '';
-    addSkeleton();
+    $parentElement.innerHTML = $template;
+    showSkeleton();
     numberCards.textContent = `${number} cards`;
     return (offset, number)
 }
-initGlobal();
+
 
 /*---------------------------move filters------------------------------------*/
 
@@ -110,7 +114,7 @@ pokemonTypeFilters[3].addEventListener('click', () => filterPokemon(3));
 const pokemonList = async (offset, type) => {
     let urltype = ``;
     $templateSkeleton = '';
-    addSkeleton();
+    //addSkeleton();
     if (type === 'all') {
         urltype = `${url}?offset=${offset}`;
         const pokemonAPI = await fetchApi(urltype);
@@ -170,6 +174,7 @@ cardDisplay();
 moreCardsButton.addEventListener('click', (event) => {
     offset += 20;
     number += 20;
+    showSkeleton();
     cardDisplay();
     numberCards.textContent = `${number} cards`;
     event.preventDefault();
