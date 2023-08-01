@@ -7,7 +7,7 @@ function addSkeleton() {
             <div class="skeleton-text"></div>
             <i class="fa-regular fa-heart skeleton-svg" style="color: #000000;"></i>
         </div>
-        <div class="pokemon-img skeleton-img" ></div>
+        <img class="pokemon-img" src="./assets/empty.png"/>
         <div class="card-text text-bottom">
             <p class="skeleton-text"></p>
             <a><button disabled class= "buy-button skeleton-btn" >Buy</button></a>

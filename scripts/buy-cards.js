@@ -197,12 +197,6 @@ function likedCards() {
                 sessionStorage.likedPokemon = JSON.stringify(likedPokemon);
             }
         })
-
     }
     )
 }
-
-
-
-
-
