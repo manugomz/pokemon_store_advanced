@@ -14,19 +14,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #DEE5ED;
-    width: 50%;
+    justify-content: space-between;
+    max-width: 80%;
+    min-height: 60%;
+    max-height: 90%;
     border-radius: 20px;
     position: fixed;
+    background-color: #DEE5ED;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    padding: 1% 2%;
 }
 
 .top-info{
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items:flex-end;
     width: 90%;
     margin-top: 4%;
+    padding: 0 5%;
 }
 /*TODO: ALIGN ID WITH CLOSE BUTTON*/
 .close{
@@ -73,11 +78,13 @@
     text-transform: capitalize;
     padding: 1% 5%;
     border-radius: 20px;
+    height: 2em;
+    line-height: 1.6em;
 }
 
 #modal-container>h1{
     text-transform: capitalize;
-    font-size: x-large;
+    font-size: large;
     margin: 2% 0%;
     color: black;
 }
@@ -85,7 +92,7 @@
 .wh{
     display: flex;
     flex-direction: row;
-    width: 60%;
+    width: 80%;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2%;
@@ -98,7 +105,7 @@
 }
 
 .stat-number{
-    font-size: 25px;
+    font-size: 1.2em;
     font-weight: bold;
 }
 
@@ -127,7 +134,16 @@
     margin-left: 1%;
 }
 
-
+.modal-button{
+    color: var(--alt-text-color);
+    background-color: var(--primary-color);
+    font-weight: bold;
+    padding: 2% 5%;
+    border: none;
+    border-radius: 5px;
+    margin: 0;
+    align-self: center;
+}
 
 .hp{
     background-color: red;
@@ -150,7 +166,7 @@
 
 @media only screen and (max-width:576px){
     .stat-number{
-        font-size: 20px;
+        font-size: 2em;
     
     }
 }

@@ -1,3 +1,5 @@
+/* Header*/
+
 h1{
     font-size: 2rem;
     font-weight: 500;
@@ -13,7 +15,9 @@ section{
     padding-top: 5%;
 }
 
-.to-dark{margin: 0 5%;}
+.to-dark{
+    margin: 0 5%;
+}
 
 .subtitle{
     width: 35%;
@@ -143,7 +147,7 @@ h6 {
     font-weight: 600;
     padding: 12% 18%;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     margin: 0;
     align-self: center;
 }
@@ -152,7 +156,7 @@ h6 {
     width: 28%;
 }
 
-/*----------------------------------Cards ------------------------------*/
+/*----------------------------- Bottom info ------------------------------*/
 
 .more-cards-info{
     display: flex;
