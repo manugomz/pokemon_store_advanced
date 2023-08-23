@@ -1,6 +1,7 @@
 /* ----------------skeleton--------------------*/
+
 function addSkeleton() {
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 16; i++) {
         $templateSkeleton += `
     <div class="card skeleton">
         <div class=" card-text">

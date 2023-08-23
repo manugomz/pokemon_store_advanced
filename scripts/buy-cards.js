@@ -113,14 +113,11 @@ pokemonTypeFilters[3].addEventListener('click', () => filterPokemon(3));
 
 const pokemonList = async (offset, type) => {
     let urltype = ``;
-    $templateSkeleton = '';
-    //addSkeleton();
     if (type === 'all') {
         urltype = `${url}?offset=${offset}`;
         const pokemonAPI = await fetchApi(urltype);
         return pokemonAPI.results;
     } else {
-
         return filteredPokemon(type);
     }
 }
@@ -197,12 +194,8 @@ function likedCards() {
                 sessionStorage.likedPokemon = JSON.stringify(likedPokemon);
             }
         })
-
     }
     )
 }
 
-
-
-
-
+//-----scroll to load cards-------

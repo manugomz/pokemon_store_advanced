@@ -1,6 +1,37 @@
-main{
-    display: flex;
+#modal{
+    display:none;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
     justify-content: center;
+}
+
+#modal-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #DEE5ED;
+    width: 50%;
+    border-radius: 20px;
+    position: fixed;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.top-info{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    width: 90%;
+    margin-top: 4%;
+}
+/*TODO: ALIGN ID WITH CLOSE BUTTON*/
+.close{
+    height: 1.5em;
+    width: 1.5em;
 }
 
 .details{
@@ -19,7 +50,7 @@ main{
     margin: 5% 10% 0% 0%;
 }
 
-.pokemon-img{
+#modal-container>.pokemon-img{
     width: 12rem;
     margin: 2% 0;
     background-color: white;
@@ -44,10 +75,11 @@ main{
     border-radius: 20px;
 }
 
-h1{
+#modal-container>h1{
     text-transform: capitalize;
     font-size: x-large;
     margin: 2% 0%;
+    color: black;
 }
 
 .wh{
@@ -93,7 +125,6 @@ h1{
     height: 100%;
     border-radius: 20px;
     margin-left: 1%;
-
 }
 
 

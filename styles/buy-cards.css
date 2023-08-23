@@ -105,12 +105,13 @@ h6 {
     margin: 2% 10% 00 10%;
 }
 
-.heart{
+.fa-heart{
     height: 1em;
 }
-.heart:hover{
-    height: 1.25em;
+.fa-heart:hover{
+    height: 1.1em;
     transition: 0.2s;
+    cursor: pointer;
 }
 
 .fa-regular::before{
@@ -186,6 +187,7 @@ h6 {
     animation: skeleton-loading 1s linear infinite alternate;
 
 }
+/*TODO:change color on dark mode*/
 
 @keyframes skeleton-loading {
     0% {
@@ -231,6 +233,12 @@ h6 {
     display: none;
 }
 /* ---------------------------------responsive------------------------------------------------*/
+
+@media only screen and (max-width:1900px){
+    .skeleton-img{
+        height: 13rem;
+    }
+}
 
 @media only screen and (max-width:912px){
     .more-cards-info{

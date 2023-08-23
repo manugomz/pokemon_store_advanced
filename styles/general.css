@@ -159,6 +159,15 @@ div>ul>li {
     padding: 1.5em 0px;
 }
 
+#other-media>div{
+    height: 2em;
+    display: flex;
+}
+#other-media>div>a{
+    width: 2em;
+    margin-right: 1em;
+}
+
 div>a>i:hover{
     font-size: 1.6em;
 }
@@ -172,8 +181,8 @@ div>a>i:hover{
     header>div{
         padding: 2% 0;
     }
-     /*----loader----*/
-     .loader:after{
+    /*----loader----*/
+    .loader:after{
         width: 44px;
         height: 44px;
     }
@@ -240,32 +249,4 @@ div>a>i:hover{
 }
 @media only screen and (max-width:375px){
     *{font-size: 10px;}
-}
-
-
-/*---- LOADER---------------- */
-
-.loader {
-    display: inline-block;
-    width: 80px;
-    height: 80px;
-}
-.loader:after {
-    content: " ";
-    display: block;
-    width: 64px;
-    height: 64px;
-    margin: 8px;
-    border-radius: 50%;
-    border: 6px solid var(--primary-color);
-    border-color: var(--primary-color) transparent var(--primary-color) transparent;
-    animation: lds-dual-ring 1.6s linear infinite;
-}
-@keyframes lds-dual-ring {
-    0% {
-    transform: rotate(0deg);
-    }
-    100% {
-    transform: rotate(360deg);
-    }
 }
