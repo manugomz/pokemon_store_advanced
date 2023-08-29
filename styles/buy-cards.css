@@ -142,14 +142,15 @@ h6 {
 }
 
 .buy-button{
+    display: inline-flex;
+    align-items: center;
     color: var(--alt-text-color);
     background-color: var(--primary-color);
     font-weight: 600;
-    padding: 12% 18%;
+    padding: 3% 6%;
     border: none;
     border-radius: 5px;
     margin: 0;
-    align-self: center;
 }
 
 .buy-link{
