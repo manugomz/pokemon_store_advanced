@@ -1,3 +1,14 @@
+function closeModal(){
+    $modal.style.display = "none";
+}  
+
+document.addEventListener('keydown',(event)=>{
+    if(event.code==="Escape"){
+        closeModal();
+        console.log("Is scape")
+    }
+})  
+
 const singlePokemonData = async (id) => {
     const endpoint = `https://pokeapi.co/api/v2/pokemon/${id}`;
     indivpokemon = await fetchApi(endpoint);
@@ -5,14 +16,14 @@ const singlePokemonData = async (id) => {
 }
 
 const pokemonDisplay = async () => {
-    $modal.style.display = "flex";
+    
     let idModal = new URLSearchParams(window.location.search).get('pokemon');
     let pokemon = await singlePokemonData(idModal);
     console.log(idModal);
     $templateModal = `
             <div class ="top-info">
             <p class="id"> #${pad(pokemon.id)} </p>
-            <button class="close" onclick="closeModal"><i class="fa-solid fa-xmark" style="color:black;"></i></button>
+            <button class="close" onclick="closeModal()"><i class="fa-solid fa-xmark" style="color:black;"></i></button>
             </div>
             <img class="pokemon-img" src="${pokemon.sprites.other['official-artwork'].front_default}" alt="${pokemon.name}" >
                 <div class ="types">
@@ -63,6 +74,7 @@ const pokemonDisplay = async () => {
                 </div>
             </div>
         `;
+    $modal.style.display = "flex";
     $modalContainer.innerHTML = $templateModal;
 }
 
